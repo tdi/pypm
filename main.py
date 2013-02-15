@@ -12,8 +12,9 @@ def main(argv):
     print("Ti %s" % get_Ti(log))
     print("To %s" % get_To(log))
     xl = get_Xl(log,seen, cs, ncs)
-    print("Xl %s" % xl )
-    print("Yl %s" % get_Yl(xl))
+    print("Xl %d %s" % (len(xl), xl) )
+    yl = get_Yl(xl) 
+    print("Yl %s %s" % (len(yl), yl) )
 
 
 
