@@ -9,12 +9,12 @@ class PetriNet(object):
         self.outputs = []
         self.connections = {}
 
-    def from_alpha(self,alpha_model):
+    def from_alpha(self,alpha_model, dotfile="dot.dot"):
         self.transitions = alpha_model.footprint.seen
         self.inputs = alpha_model.ti
         self.outputs = alpha_model.to
         dot = self._make_structure(alpha_model.yl, alpha_model.ti, alpha_model.to)
-        with open("dot.dot", "w") as f:
+        with open(dotfile, "w") as f:
             f.write(dot)
 
 
